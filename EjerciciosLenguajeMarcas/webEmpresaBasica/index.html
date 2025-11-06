@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Motor Bike Shop</title>
+  </head>
+  <body>
+    <h1>Bienvenido a tu tienda de motos de primera gama</h1>
+    <a href="https://www.google.es" target="_blank">
+      Para buscar mas informacion, pulsa aqui</a
+    >
+    <p></p>
+    <img
+      src="https://soymotero.net/wp-content/uploads/2024/10/39131f34-5ca0-8635-610e-16de1d9de992.jpg.webp"
+      alt="motosTienda"
+      width="800"
+    />
+    <br><br>
+    <form>
+      <fieldset>
+        <legend>Regitro usuario</legend>
+        <label>Nombre:</label>
+        <input type="text" name="Nombre" placeholder="Ingresa aqui tu nombre" />
+        <label>Email:</label>
+        <input type="email" name="eMail" placeholder="Insterta aqui tu eMail" />
+        <p></p>
+
+        <label> Telefono:</label>
+        <input type="tel" name="Telefono" placeholder="Numero de telefono" />
+        <label> Fecha cumpleaños:</label>
+        <input type="date" name="Fecha" placeholder="Ingresa qui tu nombre" />
+        <p></p>
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>Gustos</legend>
+        <table>
+          <tr>
+            <td>
+              <p>¿Cuáles son tus motos favoritas?</p>
+              <input
+                type="radio"
+                id="naked"
+                name="gustoMoto"
+                value="naked"
+                checked
+              />
+              <label for="naked">Naked</label><br />
+              <input
+                type="radio"
+                id="deportiva"
+                name="gustoMoto"
+                value="deportiva"
+              />
+              <label for="deportiva">Deportiva</label><br />
+              <input type="radio" id="trail" name="gustoMoto" value="trail" />
+              <label for="trail">Trail</label>
+            </td>
+            <td>
+              <p>¿Qué es lo que más te gusta de las motos?</p>
+              <input
+                type="checkbox"
+                id="velocidad"
+                name="cualidadMoto"
+                value="velocidad"
+              />
+              <label for="velocidad">Velocidad</label><br />
+              <input
+                type="checkbox"
+                id="libertad"
+                name="cualidadMoto"
+                value="libertad"
+              />
+              <label for="libertad">Libertad</label><br />
+              <input
+                type="checkbox"
+                id="rutear"
+                name="cualidadMoto"
+                value="rutear"
+              />
+              <label for="rutear">Rutear</label>
+            </td>
+            <td valign="top">
+              <p>Selecciona una de las siguientes opciones:</p>
+              <select name="futuro">
+                <option value="">¿Que haras en un futuro no muy lejano?</option>
+                <option value="otraMoto">Comprarme otra moto</option>
+                <option value="aguantar">
+                  Aguantar con la que tengo hasta que muera
+                </option>
+                <option value="comprarCoche">
+                  Paso de motos, quiero un coche
+                </option>
+                <option value="loQue">¿Lo que?</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>Algo que te gustaria contarme es:</legend>
+        <textarea name="vida" id="" cols="102" rows="5" placeholder="Cuentame algo de tu vida"></textarea>
+      </fieldset>
+    </form>
+  </body>
+</html>
