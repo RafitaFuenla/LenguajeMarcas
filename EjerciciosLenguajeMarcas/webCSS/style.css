@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+:root {
+  --color-primario: #1969ac;
+  --color-secundario: #5695e4;
+  --color-claro: #bfd5f5;
+  --color-texto: #edce68;
+  --color-fondo: #292e62;
+  --color-borde: #ddd;
+  --padding: 3px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+}
+.site-header {
+  background-color: var(--color-primario);
+  text-align: center;
+}
+
+.site-header h1 {
+  font-size: 3rem;
+  color: var(--color-fondo);
+}
+
+.site-header img {
+  border-radius: 100px;
+  width: 15%;
+  border: 2px solid;
+  border-color: var(--color-primario);
+  margin: 5px;
+}
+
+.rima {
+  color: var(--color-secundario);
+  font-style: italic;
+}
+
+h2,
+h3,
+p,
+li {
+  padding: var(--padding);
+}
+
+.tabla-productos {
+  width: 100%;
+  border-style: dotted;
+  border-color: rgb(72, 72, 239);
+  background-color: var(--color-secundario);
+  color: var(--color-fondo);
+
+  margin: 10px;
+}
+
+.tabla-productos thead {
+  background-color: var(--color-primario);
+  width: 100%;
+}
+
+.tabla-productos thead th {
+  padding: var(--padding);
+}
+
+.form {
+  border: 2px groove;
+  border-radius: 10px;
+  background-color: var(--color-claro);
+  color: var(--color-fondo);
+}
+
+.form input,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--padding);
+  border: 1px solid;
+}
+
+.acciones {
+  text-align: center;
+}
+
+.btn {
+  margin: 5px 30px;
+  border-radius: 5px;
+  padding: var(--padding);
+  transition: transform 0.5s;
+}
+
+.btn-enviar {
+  background-color: var(--color-primario);
+}
+
+.btn-borrar {
+  background-color: var(--color-secundario);
+}
+
+.btn:hover {
+  transform: scale(1.10); 
+}
+
+.site-footer{
+background-color: var(--color-primario);
+text-align: center;
+font-size: 0.8rem;
+text-decoration: none;
+}
+
+.site-footer a {
+  text-decoration: none; 
+  color: inherit;        
+}
