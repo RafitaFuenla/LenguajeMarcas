@@ -13,12 +13,14 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: Arial, sans-serif;
   background-color: var(--color-fondo);
   color: var(--color-claro);
   text-align: center;
   line-height: 1.5;
-  width: 100%;
 }
 
 nav {
@@ -46,8 +48,16 @@ nav a:hover {
   border-radius: 5px;
 }
 
+main {
+  flex: 1;
+  text-align: center;
+}
+
 h1 {
   font-size: 80px;
+  color: var(--color-claro);
+  -webkit-text-stroke: 2px var(--color-primario);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
 }
 
 .imgPortada {
@@ -56,8 +66,8 @@ h1 {
   transition: 0.4s ease;
 }
 
-.imgPortada:hover{
-    transform: scale(1.05);
+.imgPortada:hover {
+  transform: scale(1.05);
 }
 
 .eslogan {
@@ -192,6 +202,36 @@ section p {
     display: block;
     margin: 0 auto;
   }
+
+  .cualidades {
+    width: 90%; /* Se adapta al ancho de la pantalla */
+    max-width: 400px; /* Máximo 400px como el formulario */
+    padding: 15px; /* Menos padding */
+    margin: 20px auto;
+  }
+
+  .cualidades h3 {
+    font-size: 18px; /* Texto más pequeño */
+  }
+
+  .cualidades li {
+    font-size: 14px; /* Texto de lista más pequeño */
+  }
+
+  /* También puedes hacer lo mismo con el h1 */
+  h1 {
+    font-size: 40px; /* Título más pequeño en móvil */
+  }
+
+  h2 {
+    font-size: 18px;
+    padding: 0 20px;
+  }
+
+  .imgPortada {
+    width: 90%; /* Imagen más pequeña en móvil */
+    max-width: 300px;
+  }
 }
 
 .cualidades {
@@ -205,13 +245,113 @@ section p {
   border-radius: 11px;
 }
 
-.cualidades h3{
-font-size: 20px;
+.cualidades h3 {
+  font-size: 20px;
 }
 
 .cualidades ul {
-    list-style: none;
+  list-style: none;
 }
 
+.formulario {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+  place-content: center;
+  justify-content: center;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  border: groove var(--color-primario) 2px;
+  border-radius: 11px;
+  padding: var(--margin);
+  max-width: 600px;
+  margin: 20px auto;
+}
 
+.nombre {
+  grid-area: 1 / 1 / 2 / 2;
+  text-align: center;
+  align-items: center;
+}
 
+.email {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.tipoCalzoncillo {
+  grid-area: 2 / 1 / 3 / 3;
+}
+
+.areaMejorarWeb {
+  grid-area: 3 / 1 / 4 / 3;
+}
+
+.enviar {
+  grid-area: 4 / 1 / 5/ 3;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+  background-color: var(--color-secundario);
+  color: var(--color-claro);
+  border: 1px solid var(--color-primario);
+  padding: 8px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.formulario input {
+  margin: 6px;
+}
+.formulario select {
+  margin-top: 11px;
+}
+
+.formulario input[type="submit"] {
+  grid-column: 1 / -1;
+  margin: 10px auto 0;
+  padding: 12px 40px;
+  background: linear-gradient(
+    135deg,
+    var(--color-primario) 0%,
+    var(--color-secundario) 100%
+  );
+  color: white;
+  border: none;
+  border-radius: 11px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(50, 25, 74, 0.4);
+}
+
+.formulario input[type="submit"]:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 25px rgba(50, 25, 74, 0.6);
+}
+
+.formulario input[type="submit"]:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.footer {
+  background-color: var(--color-primario);
+  padding: 5px;
+  text-align: center;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+.footer a {
+  color: var(--color-claro);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
